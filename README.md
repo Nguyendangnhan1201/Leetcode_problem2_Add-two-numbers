@@ -20,12 +20,12 @@ Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
 Output: [8,9,9,9,0,0,0,1]
 ### 2. Some details to be noticed:
 The Listnode in the code is officially defined as below:  
-'''. 
+'''  
 class ListNode:  
    def __init__(self, val=0, next=None):  
-         self.val = val. 
-         self.next = next
-gagvgvbgvbrgvbragvbraegvbraebgvbraebfgvbraebfbgvbraebfbagvbraebfbabgvbraebfbabvgvbraebfbabvagvbraebfbabvaagvbraebfbabvaavgvbraebfbabvaavagvbraebfbabvaavaagvbraebfbabvaavaas
+         self.val = val  
+         self.next = next  
+'''  
 This allow us to create nodes as an object and use "next" as a way to make a chain of nodes. Therefore I highly recommend understanding the nodes and how it works as the main key to solution!
 ### 3. My idea for solution:
  - We first need to transform the chain of nodes into numbers, this can be done using array to store nodes. After that, a number is regenerated using a characteristic in which we define a number A1A2...An (n digits) as sum(Ai*(10**i)) for I ranges from 1 to n. For instance: 345 is written as: 5*1+4*10+5*100.
@@ -37,6 +37,6 @@ This allow us to create nodes as an object and use "next" as a way to make a cha
             digit = result % 10            
             curr.next = ListNode(digit)   
             curr = curr.next              
-            result //= 10
+            result //= 10  
    '''
    
